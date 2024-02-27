@@ -12,13 +12,12 @@ dotenv.config();
 
 app.use(express.json());
 app.use(cookieParser());
-
-const corsOptions = {
-	origin: ["http://localhost:5173", "https://chatme-qafa.onrender.com"],
-};
-
-// Enable CORS with the specified options
-app.use(cors(corsOptions));
+app.use(
+	cors({
+		origin: "http://localhost:5000", // Replace with your frontend URL
+		credentials: true,
+	})
+);
 
 const port = 5000 || process.env.PORT;
 
