@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
 	cors: {
-		origin: ["https://chatme-qafa.onrender.com/"],
+		origin: ["https://chatme-qafa.onrender.com"],
 		methods: ["GET", "POST"],
 	},
 });
