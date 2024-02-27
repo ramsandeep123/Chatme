@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: "https://chatme-qafa.onrender.com/", // Replace with your frontend URL
+		origin: "https://chatme-qafa.onrender.com", // Replace with your frontend URL
 		credentials: true,
 	})
 );
