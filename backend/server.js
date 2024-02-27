@@ -9,15 +9,15 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import { app, server } from "./socket/socket.js";
 dotenv.config();
-app.use(
-	cors({
-		origin: "https://chatme-qafa.onrender.com", // Replace with your frontend URL
-		credentials: true,
-	})
-);
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(
+	cors({
+		origin: "http://localhost:5000", // Replace with your frontend URL
+		credentials: true,
+	})
+);
 
 const port = 5000 || process.env.PORT;
 
